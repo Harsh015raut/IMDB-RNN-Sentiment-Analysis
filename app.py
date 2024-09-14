@@ -52,9 +52,12 @@ if st.button('Classify'):
     # Display the result
     st.write(f'Sentiment: {sentiment}')
     st.write(f'Prediction Score: {prediction[0][0]}')
-    st.write(f'We are Glad that you liked the movie.Keep Posting!!')
+    if sentiment=='Positive':
+        st.write(f'We are Glad that you liked the movie.Thank you for the Review.Keep Posting!! ')
+    else:
+        st.write(f'We hope you get a good movie to watch next time')
 else:
     st.write('Please enter a movie review.')
-    st.write(f'We are hope that you get a good movie to watch next time.')
+   
 
 
